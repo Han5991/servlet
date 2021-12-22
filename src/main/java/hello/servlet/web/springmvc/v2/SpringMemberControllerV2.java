@@ -35,7 +35,6 @@ public class SpringMemberControllerV2 {
     public ModelAndView members() {
         List<Member> memberList = memberRepository.findAll();
         ModelAndView members = new ModelAndView("members");
-        members.getModel().put("members", memberList);
         members.addObject("members", memberList);
         return members;
     }
